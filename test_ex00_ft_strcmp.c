@@ -5,26 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 23:52:59 by porrapat          #+#    #+#             */
-/*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */
+/*   Created: 2021/10/26 23:52:59 by porrapat          #+#    #+#             */
+/*   Updated: 2021/10/26 23:53:55 by porrapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
-#include <unistd.h>
 #include <string.h>
 
-char	*ft_strcpy(char *dest, char *src);
+int	ft_strcmp(char *s1, char *s2);
 
 int	main(void)
 {
-	char	*src;
-	char	dest[22];
+	char *str1;
+	char *str2;
 
-	src = "Hello World";
-	printf("base   : %s\n", src);
-	strcpy(dest, src);
-	printf("dest    : %s\n", dest);
-	ft_strcpy(dest, src);
-	printf("dest ft_cpy : %s\n", dest);
-	return (0);
+	str1 = "Hello";
+	str2 = "Helloo";
+	printf("c  : %d\n", strcmp(str1, str2));
+	printf("ft : %d\n", ft_strcmp(str1, str2));
 }
