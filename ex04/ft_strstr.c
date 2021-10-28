@@ -14,8 +14,8 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	char *haystack;
-	char *needle;
+	char	*haystack;
+	char	*needle;
 
 	if (*to_find == '\0')
 		return (str);
