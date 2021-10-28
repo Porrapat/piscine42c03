@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,17 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-#include <unistd.h>
+#include <string.h>
 
-int	ft_str_is_alpha(char *str);
+char	*ft_strcat(char *dest, char *src);
 
 int		main(void)
 {
-	char *str_valid;
-	char *str_invalid;
+	char	*str_base;
+	char	dest[100];
+	char	dest2[100];
+	char	*src;
+	int		index;
 
-	str_valid = "Hello";
-	str_invalid = "Hell0";
-	printf("should be 1: %d\n", ft_str_is_alpha(str_valid));
-	printf("should be 0: %d\n", ft_str_is_alpha(str_invalid));
+	str_base = "Hello";
+	src = " World";
+	index = 0;
+	while (index < 6)
+	{
+		dest[index] = str_base[index];
+		dest2[index] = str_base[index];
+		index++;
+	}
+	printf("c  : %s$\n", strcat(dest, src));
+	printf("ft : %s$\n", ft_strcat(dest2, src));
 }
