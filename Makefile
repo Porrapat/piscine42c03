@@ -38,7 +38,9 @@ test:	all
 	-diff result_current_ex01_ft_strncmp.txt result_sample_ex01_ft_strncmp.txt
 	-diff result_current_ex02_ft_strcat.txt result_sample_ex02_ft_strcat.txt
 	-diff result_current_ex03_ft_strncat.txt result_sample_ex03_ft_strncat.txt
-	-diff result_current_ex04_ft_strstr.txt result_sample_ex04_ft_strstr.txt
+	-cat result_sample_ex04_ft_strstr.txt | tail -n 2 > result_sample_ex04_ft_strstr_for_test.out
+	-cat result_current_ex04_ft_strstr.txt | tail -n 2 > result_current_ex04_ft_strstr_for_test.out
+	-diff result_sample_ex04_ft_strstr_for_test.out result_current_ex04_ft_strstr_for_test.out
 	-diff result_current_ex05_ft_strlcat.txt result_sample_ex05_ft_strlcat.txt
 
 clean:
@@ -50,6 +52,8 @@ clean:
 	-rm test_ex03_ft_strncat
 	-rm test_ex04_ft_strstr
 	-rm test_ex05_ft_strlcat
+	-rm result_sample_ex04_ft_strstr_for_test.out
+	-rm result_current_ex04_ft_strstr_for_test.out
 
 clean-sample:
 	-rm -rf result_sample_ex*.txt
