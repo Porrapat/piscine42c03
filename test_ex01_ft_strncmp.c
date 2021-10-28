@@ -13,23 +13,36 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
+#include <stdio.h>
+#include <string.h>
 
-int main()
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
+
+int	main(void)
 {
-    /* Create an example variable capable of holding 50 characters */
-    char example[50];
+	char *str1;
+	char *str2;
 
-    /* Copy 16 characters into the example variable
-     from the string "TechOnTheNet.com knows strncpy" */
-    ft_strncpy (example, "TechOnTheNet.com knows ft_strncpy!", 16);
+	str1 = "Helo";
+	str2 = "Helloo";
+	printf("c  : %d\n", strncmp(str1, str2, 3));
+	printf("ft : %d\n", ft_strncmp(str1, str2, 3));
 
-    /* Add the required NULL to terminate the copied string */
-    /* strncpy does not do this for you! */
-    example[16] = '\0';
 
-    /* Display the contents of the example variable to the screen */
-    printf("%s\n", example);
+    char *str3;
+	char *str4;
 
-    return 0;
+	str3 = "";
+	str4 = "dsa";
+
+	printf("c  : %d\n", strncmp(str3, str4, 3));
+	printf("ft : %d\n", ft_strncmp(str3, str4, 3));
+
+    char *str5;
+	char *str6;
+
+	str5 = "Helo";
+	str6 = "Helloo";
+	printf("c  : %d\n", strncmp(str5, str6, 6));
+	printf("ft : %d\n", ft_strncmp(str5, str6, 6));
 }

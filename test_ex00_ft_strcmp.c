@@ -24,4 +24,20 @@ int	main(void)
 	str2 = "Helloo";
 	printf("c  : %d\n", strcmp(str1, str2));
 	printf("ft : %d\n", ft_strcmp(str1, str2));
+
+	char *str3;
+	char *str4;
+
+	str3 = "Helloo";
+	str4 = "Helloo";
+	printf("c  : %d\n", strcmp(str3, str4));
+	printf("ft : %d\n", ft_strcmp(str3, str4));
+
+	char *str5;
+	char *str6;
+
+	str5 = "Hellooo";
+	str6 = "Helloo";
+	printf("c  : %d\n", strcmp(str5, str6));
+	printf("ft : %d\n", ft_strcmp(str5, str6));
 }
