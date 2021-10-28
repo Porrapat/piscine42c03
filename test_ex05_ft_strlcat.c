@@ -9,18 +9,26 @@
 /*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
-int		ft_str_is_uppercase(char *str);
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 
-int		main(void)
+int	main(void)
 {
-	char *str_valid;
-	char *str_invalid;
+	char	*str_base;
+	char	dest2[100];
+	char	*src;
+	int		index;
 
-	str_valid = "HELLO";
-	str_invalid = "HELLo";
-	printf("should be 1: %d\n", ft_str_is_uppercase(str_valid));
-	printf("should be 0: %d\n", ft_str_is_uppercase(str_invalid));
+	str_base = "Hello";
+	src = " World";
+	index = 0;
+	while (index < 6)
+	{
+		dest2[index] = str_base[index];
+		index++;
+	}
+	printf("ft : (%d) $%s$\n", ft_strlcat(dest2, src, 10), dest2);
+	printf("ft (result) : $%s$\n", dest2);
 }

@@ -12,15 +12,28 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-int		ft_str_is_numeric(char *str);
+#include <stdio.h>
+#include <string.h>
+
+char	*ft_strncat(char *dest, char *src, unsigned int nb);
 
 int		main(void)
 {
-	char *str_valid;
-	char *str_invalid;
+	char	*str_base;
+	char	dest[100];
+	char	dest2[100];
+	char	*src;
+	int		index;
 
-	str_valid = "123456";
-	str_invalid = "123A56";
-	printf("should be 1: %d\n", ft_str_is_numeric(str_valid));
-	printf("should be 0: %d\n", ft_str_is_numeric(str_invalid));
+	str_base = "Hello";
+	src = " World";
+	index = 0;
+	while (index < 6)
+	{
+		dest[index] = str_base[index];
+		dest2[index] = str_base[index];
+		index++;
+	}
+	printf("c  : %s$\n", strncat(dest, src, 4));
+	printf("ft : %s$\n", ft_strncat(dest2, src, 4));
 }

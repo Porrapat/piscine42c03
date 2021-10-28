@@ -11,16 +11,22 @@
 /* ************************************************************************** */
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
-int		ft_str_is_lowercase(char *str);
+char	*ft_strstr(char *str, char *to_find);
 
 int		main(void)
 {
-	char *str_valid;
-	char *str_invalid;
+	char *haystack;
+	char *needle;
+	char *result_c;
+	char *result_ft;
 
-	str_valid = "hello";
-	str_invalid = "hellO";
-	printf("should be 1: %d\n", ft_str_is_lowercase(str_valid));
-	printf("should be 0: %d\n", ft_str_is_lowercase(str_invalid));
+	haystack = "Foo Bar Baz";
+	needle = "Bar";
+	result_c = strstr(haystack, needle);
+	result_ft = ft_strstr(haystack, needle);
+	printf("%p / %p\n", result_c, result_ft);
+	printf("c  : %s$\n", result_c);
+	printf("ft : %s$\n", result_ft);
 }
